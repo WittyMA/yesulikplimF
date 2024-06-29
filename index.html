@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YesulikplimITS</title>
+    <link rel="icon" type="image/icon" href="img/yistf.ico">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <!-- Calendar -->
+    <link href='https://unpkg.com/@fullcalendar/core@5.10.1/main.min.css' rel='stylesheet' />
+    <link href='https://unpkg.com/@fullcalendar/daygrid@5.10.1/main.min.css' rel='stylesheet' />
+    <script src='https://unpkg.com/@fullcalendar/core@5.10.1/main.min.js'></script>
+    <script src='https://unpkg.com/@fullcalendar/daygrid@5.10.1/main.min.js'></script>
+    <script src='https://unpkg.com/@fullcalendar/interaction@5.10.1/main.min.js'></script>
+<script>
+</script>
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- MAIN JS -->
+    <script src="js/main.js"></script>
+    <!-- MAIN JQUERY -->
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="calender/calStyle.css">
+    <!--Internal method of out-source (linking CSS to HTML)-->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script class="module" type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="emailjs/email.js"></script>
+    <script class="module" src="typed.js@2.0.12"></script> 
+    <script class="module" src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+
+</head>
+
+<body>
+ <!-- NAVBAR -->
+ <section class="container-fluid mainHeader fadeIn" id="navbar">
+    <div class="navbar navbar-inverse" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" id="myBtn" data-toggle="collapse" data-target=".navbar-collapse" title="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="models/models.html">☕ Development with Anyizah</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" class="neon-text-1">Home</a></li>
+                    <li><a href="#about" class="neon-text-1">About</a></li>
+                    <li><a href="#skills" class="neon-text-1">Skills</a></li>
+                    <li><a href="#experience" class="neon-text-1">Experience</a></li>
+                    <li><a href="#projects" class="neon-text-1">Projects</a></li>
+                    <li><a href="#contact" class="neon-text-1">Contact Me</a></li>
+                    <li class="neon-text-1"><button class="admin-button" id="adminButton">Admin</button></li>
+                    <li><&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li><img class="inline-block h-10 w-10 rounded-full yits" id="myPic" src="img/yistf.png" alt=""></li>
+                    <li>&nbsp;&nbsp;</li>
+                    <li><img class="inline-block h-10 w-10 rounded-full" id="myPic" src="img/wity2.jpg" alt=""></li> <!--https://cdn.ucc.edu.gh/photos/?tag=PS/ITC/20/0057-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="login-container", id="loginContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <script src="login.js"></script>
+    </div>
+        <div id="calendar" class="dropdown">
+            <!-- FullCalendar will be populated by JavaScript -->
+        </div>
+        
+        <div id="time" class="dropdown">
+            <!-- Time will be populated by JavaScript -->
+        </div>
+        
+        <script src="calender/fullcalendar/dist/index.global.js"></script>
+        <script src="calender/calScript.js"></script>
+    </section>
+    <!-- HOME -->
+    <section class="home fadeIn">
+        <div class="header-section">
+            <div class="container checkOutMyPortfolio">
+                <figure class="fig">
+                    <img src="img/profile.png"" class="fig__media" height="150" width="200" alt="Profile Picture"/>
+                    <figcaption class="image-caption-text"><b>☕ WISDOM K. ANYIZAH ® ☕ </b></figcaption>
+                </figure>
+                <h2 class="neon-text">Hello World..<span>!</span></h2>
+                <div class="neon-text" id="typing-container">
+                    <span class="color-changing-text" id="typed-output"></span><span id="cursor" style="font-size: larger;">|</span>
+                </div>
+                <p> </p> 
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="container-fluid about fadeIn" id="about">
+        <h3 class="neon-text">About</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-6">
+                    <div class="contain">
+                    <img class="yourPic img-responsive " style="text-align:center" id="zoom-out" src="img/profile2.png" alt="Anyizah Wisdom", height="200", width="400"><br>
+                    <div class="caption" id="caption">☕ WISDOM KORBLA ANYIZAH ® ☕, an Advanced Deep Learning Software Engineer</div>
+                    </div><br><br>
+                    <p style="font-size: large;"><strong>I am an Artificial Intelligence Software Engineer 💌<br><br>☕ I am highly enthusiastic❤️ about in programming and problem-solving
+                        <br><br>I am sophisticated in Data Science, Artificial Intelligence, Machine Learning, Advanced Deep Learning, and Software Engineering.
+                    </strong></p>
+                    <div class="contain">
+                    <img class="figure" id="zoom-out" src="img/yistf.png" alt="YITS", height=300", width="400"><br>
+                    <div class="caption" id="caption">Yesulikplim Information Technology Services ® &nbsp; YITS ™ <br><center>☕☕☕</center></div>
+                    </div>  
+                </div>
+                <div class="col-sm-9 col-md-6">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Programming, Software Development & Engineering</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body" style="text-align: left;">
+                                    Mastering Programming, Software Development, and Software Engineering involves understanding the foundational principles of programming, 
+                                    including knowledge of various programming languages such as Python, Java, C++, and JavaScript, and their respective syntax and use cases.
+                                    It requires proficiency in writing efficient and clean code, debugging and troubleshooting, and applying object-oriented programming principles 
+                                    to develop scalable and maintainable software solutions.
+                                    <br><br>
+                                    In the realm of Software Development, essential skills include understanding the software development lifecycle (SDLC), employing methodologies such as 
+                                    Agile, Scrum, and DevOps to manage and streamline development processes, and using version control systems like Git to collaborate effectively with other 
+                                    developers. Familiarity with integrated development environments (IDEs) and tools such as Visual Studio Code, IntelliJ IDEA, and Eclipse is also crucial for 
+                                    enhancing productivity and code quality.
+                                    <br><br>
+                                    Proficiency in Software Engineering is critical, encompassing skills in designing robust software architectures, applying design patterns, and ensuring 
+                                    software quality through rigorous testing methods, including unit testing, integration testing, and automated testing frameworks like JUnit and Selenium. 
+                                    Additionally, it involves understanding principles of software maintenance, refactoring, and technical debt management to ensure long-term sustainability 
+                                    and performance of software systems.
+                                    <br><br>
+                                    Advanced topics in Programming, Software Development, and Software Engineering include cloud computing, where skills in platforms such as AWS, Azure, and 
+                                    Google Cloud are essential, as well as knowledge of microservices architecture and containerization technologies like Docker and Kubernetes for deploying 
+                                    and scaling applications. Real-world applications and case studies illustrate how these skills are applied in various industries, such as fintech, healthcare, 
+                                    e-commerce, and gaming, demonstrating the impact of well-engineered software solutions on business success and innovation.
+                                    <br><br>
+                                    Developing a career in Programming, Software Development, and Software Engineering involves building a robust portfolio of projects, obtaining relevant 
+                                    certifications, engaging in continuous learning through online courses, workshops, and professional communities, and staying updated with the latest industry 
+                                    trends and technological advancements. Understanding various job roles and responsibilities, from junior developer to senior software engineer and technical 
+                                    lead, and developing soft skills such as problem-solving, communication, and teamwork are also vital for career growth and success.
+                                    <br><br>
+                                    Addressing challenges and future directions in Programming, Software Development, and Software Engineering includes tackling issues related to cybersecurity,
+                                    ensuring data privacy and compliance, and exploring emerging technologies such as artificial intelligence, machine learning, and blockchain that are poised 
+                                    to revolutionize the software industry. This comprehensive guide encourages continuous learning and exploration, offering a glossary of terms, 
+                                    recommended readings and resources, example code snippets, and tutorials. 
+                                    </div></div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Artificial Intelligence, Machine Learning & Deep Learning</a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body" style="text-align: left;">
+                                    Mastering AI, ML, and DL involves understanding the foundations of Artificial Intelligence, including its definition,
+                                    history, key concepts, applications in various industries, and ethical considerations. 
+                                    It also requires a deep dive into Machine Learning, covering what it is, its types 
+                                    (supervised, unsupervised, reinforcement learning), key algorithms (such as linear regression,
+                                    decision trees, K-nearest neighbors), and how to evaluate ML models using precision, recall, 
+                                    F1 score, and ROC-AUC. Additionally, proficiency in Deep Learning is crucial, which involves 
+                                    understanding neural networks, key architectures like Convolutional Neural Networks and Recurrent 
+                                    Neural Networks, and popular frameworks such as TensorFlow, PyTorch, and Keras. 
+                                    <br><br>
+                                    Practical skills and tools are essential, including programming languages like Python and R, 
+                                    libraries such as NumPy, Pandas, Scikit-learn, TensorFlow, and PyTorch, and techniques for data preprocessing, 
+                                    cleaning, model training, and optimization. Advanced topics in AI, ML, and DL include Natural Language Processing (NLP),
+                                    computer vision, reinforcement learning, Generative Adversarial Networks (GANs), and transfer learning. 
+                                    <br><br>
+                                    Real-world applications and case studies showcase AI in healthcare, ML in finance, DL in autonomous vehicles, 
+                                    and AI and ML in retail and e-commerce. Developing a career in AI, ML, and DL involves building a portfolio 
+                                    with projects and certifications, networking and joining professional communities, understanding job roles 
+                                    and responsibilities, and continuing education to stay current with industry trends. 
+                                    <br><br>
+                                    Current challenges and future directions in AI, ML, and DL include addressing ethical and societal implications,
+                                    predicting future trends, and exploring the role of AI in shaping the future. This comprehensive guide 
+                                    encourages continuous learning and exploration, offering a glossary of terms, recommended readings and resources, 
+                                    example code snippets, and tutorials.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Data Analysis, Data Science & Big Data mining</a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body" style="text-align: left;">
+                                    Mastering Data Science, Data Analysis, and Big Data Mining involves understanding the foundational principles of Data Science, including its definition, 
+                                    history, and the role of data in decision-making across various industries. It also requires a deep dive into Data Analysis, covering essential skills 
+                                    such as collecting, cleaning, and preprocessing data, using statistical methods to uncover patterns, and employing visualization tools like Matplotlib, 
+                                    Seaborn, and Tableau to communicate insights effectively.
+                                    <br><br>
+                                    Proficiency in Big Data Mining is crucial, which involves understanding large-scale data processing frameworks like Hadoop and Spark, as well as techniques 
+                                    for handling and analyzing vast amounts of data efficiently. Practical skills in programming languages such as Python, R, and SQL are essential, alongside 
+                                    familiarity with libraries and tools like Pandas, NumPy, Scikit-learn, and TensorFlow for machine learning and predictive modeling.
+                                    <br><br>
+                                    Advanced topics in Data Science, Data Analysis, and Big Data Mining include machine learning algorithms (supervised, unsupervised, and reinforcement learning),
+                                    deep learning, natural language processing, and the use of artificial intelligence to enhance data-driven decision-making. Real-world applications 
+                                    and case studies illustrate how these skills are applied in sectors like healthcare, finance, retail, and social media analytics, showcasing the transformative 
+                                    impact of data-driven insights on business strategies and operations.
+                                    <br><br>
+                                    Developing a career in Data Science, Data Analysis, and Big Data Mining involves building a strong portfolio through hands-on projects and certifications, 
+                                    engaging in professional communities and networks, understanding various job roles and their responsibilities, and continuously learning to keep up with
+                                    the latest industry trends and technological advancements.
+                                    <br><br>
+                                    Addressing challenges and future directions in Data Science, Data Analysis, and Big Data Mining includes tackling issues related to data privacy and security, 
+                                    ensuring ethical use of data, and staying informed about emerging trends and technologies that will shape the future of data-driven fields. 
+                                    This comprehensive guide encourages continuous learning and exploration, offering a glossary of terms, recommended readings and resources, 
+                                    example code snippets, and tutorials.
+                                    </div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="container-fluid skills fadeIn" id="skills">
+        <div class="study-section">
+            <div class="container">
+                <div class="study-grids">
+                    <div class="col-md-6 study-grid">
+                        <h3 class="neon-text">Achievement.<span>!</span></h3>
+                        <div class="study1">
+                            <p id="sp1">Bachelor of Science (B.Sc.)<label id="lb">( 2024 )</label></p><br>
+                            <p id="sp">Master Java Programming & SQL <label id="lb">( 2022 )</label></p>
+                            <p id="sp">Python Programming <label id="lb">( 2022 )</label></p>
+                            <p id="sp">C++ Programming<label id="lb">( 2022 )</label></p>
+                            <p id="sp">Database Management System (SQL)<label id="lb">( 2022 )</label></p>
+                            <p id="sp">R Programming<label id="lb">( 2024 )</label></p>
+                            <p id="sp">JavaScript programming (React.js
+                                and Node.js)<label id="lb">( 2023 )</label></p>
+                            <p id="sp">
+                                Data Science, Machine Leaning, Deep Learning,
+                                Big Data and NL Processing, and AI<label id="lb">( 2023 )</label></p>
+                            <p id="sp">Data Structure and Algorithms <label id="lb">( 2024 )</label></p>
+                            <p id="sp">Cybersecurity & Ethical Hacking & UNIX/LINUX<label id="lb">( 2024 )</label></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 study-grid">
+                        <h3 class="neon-text">skills..<span>!</span>&nbsp&nbsp<i class="fa fa-anchor" style="color:#4267b2;"></i></h3>
+                        <div class="study2">
+                            <h4 id="sk">Java&nbsp&nbsp<i class="fa fa-facebook" style="color:#4267b2;"></i></h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                    <span class="sr-only">90% Complete (success)</span>
+                                </div>
+                            </div>
+                            <h4 id="sk">Python</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                    <span class="sr-only">90% Complete (success)</span>
+                                </div>
+                            </div>
+                            <h4 id="sk">C++</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                    <span class="sr-only">85% Complete (warning)</span>
+                                </div>
+                            </div>
+                            <h4 id="sk">Database (SQL)</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                    <span class="sr-only">90% Complete (success)</span>
+                                </div>
+                            </div>
+                            <h4 id="sk">R</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="sr-only">80% Complete (success)</span>
+                                </div>
+                            </div>
+                            <h4 id="sk">JavaScript (ReactJs & NodeJs)</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="sr-only">80% Complete (success)</span>
+                                </div>
+                            </div>
+                            <h4 id="sk">Data Science, AI, Machine Learning, & Deep Learning</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="sr-only">80% Complete (success)</span>
+                                </div>
+                            </div>
+                            <h4 id="sk">Data Structure & Algorithms</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="sr-only">80% Complete (success)</span>
+                                </div>
+                            </div>
+                            <h4 id="sk">Cybersecurity & Ethical Hacking & UNIX</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-needs-advanced" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                    <span class="sr-only">70% Complete (warning)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="container-fluid experience fadeIn" id="experience">
+        <h3 class="neon-text">Experience</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="contain" id="pjFont">
+                    <div class="figure">
+                        <img class="img-responsive" src="img/pca.png" alt="Project 1" width="400" height="300" />
+                        <div class="caption" id="caption">PCA graph (Dimensionality Reduction).</div>
+                        <div class="figcaption">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contain" id="pjFont">
+                    <div class="figure">
+                        <img class="img-responsive" id="zoom-out" src="img/fish_time.png" alt="Project 2" width="400" height="300" />
+                        <div class="caption" id="caption">CCA graph for two components (Envronmetal factors and Species.)</div>
+                        <div class="figcaption">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contain" id="pjFont">
+                    <div class="figure">
+                        <img class="img-responsive" src="img/nmds.png" alt="Project 3" width="400" height="300" />
+                        <div class="caption" id="caption">NMDS graph for two components (Envronmetal factors and Species.)</div>
+                        <div class="figcaption">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contain" id="pjFont">
+                    <div class="figure">
+                        <img class="img-responsive" src="img/all_env_spe.png" alt="Project 3" width="400" height="300" />
+                        <div class="caption" id="caption">PCA graph for two components (Envronmetal factors and Species.)</div>
+                        <div class="figcaption">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contain" id="pjFont">
+                    <div class="figure">
+                        <img class="img-responsive" src="img/prEle.png" alt="Project 3" width="400" height="300" />
+                        <div class="caption" id="caption">Electricity Bill Distributor.</div>
+                        <div class="figcaption">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="container-fluid projects fadeIn" id="projects">
+        <h3 class="neon-text">Projects</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="contain" id="pjFont">
+                    <div class="figure">
+                        <img class="img-responsive" src="img/infoEle.png" alt="Project 1" width="400" height="500" />
+                        <div class="caption" id="caption">Development under Yesulikplim Information Technology Services.</div>
+                        <div class="figcaption">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contain" id="pjFont">
+                    <div class="figure">
+                        <img class="img-responsive" src="img/bgEle.png" alt="Project 2" width="400" height="300" />
+                        <div class="caption" id="caption">Java and JavaFX for Desktop Application.</div>
+                        <div class="figcaption">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contain" id="pjFont">
+                    <div class="figure">
+                        <img class="img-responsive" src="img/pca.png" alt="Project 3" width="400" height="300" />
+                        <div class="caption" id="caption">Machine Learning Models and visualization.</div>
+                        <div class="figcaption">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="container-fluid contact fadeIn" id="contact">
+        <h3 class="neon-text">Contact Me</h3>
+        <div class="container">
+            <form action="" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" autocomplete="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" autocomplete="off" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" rows="3"  placeholder="Enter your message" autocomplete="on" name="message" required></textarea>
+                </div>
+                <div id="char-count">0 characters</div>
+                <div id="word-count">0/500 words</div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+            <div id="notification" style="margin-top: 10px;"></div>
+            <br><br><br> 
+                <a href="chatMe/index.html">
+                        <img src="img/whatme.png"" class="fig__media" height="80" width="140" alt="Chat me"/><br>
+                        <strong>Click WhatsApp to chat me right away for more info..</strong>
+                </a>
+            </div>
+        </section>
+
+    <!-- FOOTER -->
+    <br>
+    <br>
+    <br>
+    <footer class="container-fluid text-center">
+        <div class="copyright">
+        <marquee behavior="scroll" direction="left">
+            <div class="marquee-container">
+                <div class="okayright">           
+                    <p class="color-changing-text" id="responsive-text" style="text-align: center;">&copy; 2024 Wisdom K. Anyizah ( Yesulikplim Information Technology Services ® &nbsp; YITS ™ ). All rights reserved.<br>
+                    <img class="inline-block h-10 w-10 rounded-full yits" id="myPic" src="img/yistf.png" alt=""></l1>&nbsp;
+                    <img class="inline-block h-10 w-10 rounded-full" id="myPic" src="img/wity1.jpg" alt=""> <!-- https://cdn.ucc.edu.gh/photos/?tag=PS/ITC/20/0057 -->
+                </p>
+            </div>
+        </div>
+        </marquee>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/icon" href="../img/yistf.ico">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- MAIN JS -->
+    <script src="../js/main.js" defer></script>
+
+    <!-- MAIN JQUERY -->
+    <script src="../js/jquery.js" defer></script>
+    <title>Artificial Intelligence Models</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <section class="container-fluid mainHeader fadeIn" id="navbar">
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">☕ Development with Anyizah</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html" class="neon-text-1">Home</a></li>
+                        <li class="active"><a href="#" class="neon-text-1">Models</a></li>
+                        <li><a href="../index.html#about" class="neon-text-1">About</a></li>
+                        <l1><img class="inline-block h-10 w-10 rounded-full yits" id="myPic" src="../img/yistf.png" alt=""></l1>&nbsp;
+                        <l1><img class="inline-block h-10 w-10 rounded-full" id="myPic" src="../img/wity2.jpg" alt=""></l1> <!--https://cdn.ucc.edu.gh/photos/?tag=PS/ITC/20/0057-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="construction-container">
+        <img src="images/const.png" alt="Under Construction" class="construction-image">
+        <h1 class="construction-title">This Page is Under Construction</h1>
+        <p class="construction-message">We are working hard to bring you the best experience. Stay tuned!</p>
+        <p class="countdown-timer" id="countdown"></p>
+    </div>
+    <!-- Footer -->
+    <footer class="container-fluid text-center">
+        <div class="copyright">
+        <marquee behavior="scroll" direction="left">
+            <div class="marquee-container">
+                <div class="okayright">           
+                    <p class="color-changing-text" id="responsive-text" style="text-align: center;">&copy; 2024 Wisdom K. Anyizah ( Yesulikplim Information Technology Services ® &nbsp; YITS ™ ). All rights reserved.<br>
+                    <img class="inline-block h-10 w-10 rounded-full yits" id="myPic" src="../img/yistf.png" alt=""></l1>&nbsp;
+                    <img class="inline-block h-10 w-10 rounded-full" id="myPic" src="../img/wity1.jpg" alt=""> <!-- https://cdn.ucc.edu.gh/photos/?tag=PS/ITC/20/0057 -->
+                </p>
+            </div>
+        </div>
+        </marquee>
+        </div>
+    </footer>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 31, 2025 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+

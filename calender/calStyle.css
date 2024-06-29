@@ -1,0 +1,43 @@
+.dropdown {
+    position: fixed;
+    right: 20px;
+    background-color: #ffff;
+    border: 1px solid #817d7d;
+    padding: 10px;
+    z-index: 1000;
+    transition: opacity 0.3s ease-out; /* Smooth opacity transition */
+    opacity: 1; /* Initially visible */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #time {
+    top: 0.2vw; /* Position time display at the top */
+    font-weight: bold;
+    font-size: 2vw;
+    transition: font-size 0.3s ease;
+    transition: top 0.3s ease;
+    transition: font-weight 0.3s ease;
+
+  }
+  
+  #calendar {
+    top: 8vw; /* Position calendar below time display */
+    height: 32vw;
+    width: 25vw;
+    font-weight: bold;
+    font-size: 1vw;
+    transition: height 0.3s ease;
+    transition: width 0.3s ease;
+    transition: top 0.3s ease;
+    transition: font-size 0.3s ease;
+    transition: font-weight 0.3s ease;
+    margin: 0 auto;
+
+  }
+  
+  .dropdown.hidden {
+    opacity: 0; /* Hidden when scrolled down */
+    pointer-events: none; /* Disable pointer events when hidden */
+  }
+
+
