@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         if (response.ok) {
           alert(data.message); // Display success message or handle as needed
-          window.location.href = 'https://yesulikplimits.com/admin.html'; // Redirect to admin page on success
+          window.location.href = 'https://www.yesulikplimits.com/admin.html'; // Redirect to admin page on success
         } else {
           alert(data.error); // Display error message from server
         }
