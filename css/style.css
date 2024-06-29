@@ -368,7 +368,7 @@ background: rgba(255,255,255,0.3);
   font-size: 1.3em;
   text-transform: capitalize;
   color: #000000;
-  background-color: rgb(3, 136, 190, 0.2);
+  background-color: rgb(3, 136, 190, 0.3);
   border-radius: 5px;
   }
 .study1 {
@@ -567,7 +567,8 @@ figcaption {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: 100vw;
+  transition: width 0.3s ease;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -594,14 +595,14 @@ figcaption {
 }
 
 .marquee-container {
-  width: 52%; /* Adjust the width as needed */
+  width: 60vw; /* Adjust the width as needed */
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
   position:  relative;
   background-color: #ffff;
   padding-top: 45px;
-  height: 150px;
+  height: 15vw;
   border-radius: 50%;
   position: relative; /* Position the inner div absolutely */
   top: 50%; /* Position it 50% from the top */
@@ -609,6 +610,9 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: width 0.3s ease;
+  transition: height 0.3s ease;
+  transition: font-size 0.3s ease;
 }
 
 #marquee {
@@ -725,14 +729,15 @@ color: red;
 .caption {
   display: none;
   position: absolute;
-  bottom: -10px;
-  left: 35px;
+  bottom: 5px;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 5px;
   border-radius: 4px;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
+  font-size: 1vw;
+  transition: font-size 0.3s ease;
 }
 .contain:hover .caption {
   display: block;
