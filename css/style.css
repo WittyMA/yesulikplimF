@@ -621,9 +621,10 @@ figcaption {
 }
 
 .color-changing-text {
-  font-size: 20px;
+  font-size: 1vw;
   font-weight: bolder;
   animation: color-blink 10s linear infinite;
+  transition: font-size 0.3s ease;
 }
 
 @keyframes color-blink {
