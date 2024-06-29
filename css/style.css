@@ -272,7 +272,7 @@ background: rgba(255,255,255,0.3);
   font-style: normal;
   font-weight: 100;
   src: local('Lato Hairline'), local('Lato-Hairline'), 
-  url('http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff') format('woff');
+  url('https://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff') format('woff');
 }
 
 @font-face {
@@ -280,7 +280,7 @@ background: rgba(255,255,255,0.3);
   font-style: normal;
   font-weight: 300;
   src: local('Lato Light'), local('Lato-Light'), 
-  url('http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff') format('woff');
+  url('https://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff') format('woff');
 }
 @font-face {
   font-family: 'Lato';

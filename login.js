@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   
       try {
-        // Send login request to server
         const response = await fetch('/login', {
           method: 'POST',
           headers: {
@@ -34,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           body: JSON.stringify({ username, password }),
         });
-  
+      
         if (!response.ok) {
           throw new Error('Network response was not ok.');
         }
-  
+      
         const data = await response.json();
-  
+      
         if (response.ok) {
           alert(data.message); // Display success message or handle as needed
           window.location.href = 'https://www.yesulikplimits.com/admin.html'; // Redirect to admin page on success
@@ -51,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Login error:', error);
         alert('Login failed. Please try again later.');
       }
+      
     });
   });
   
