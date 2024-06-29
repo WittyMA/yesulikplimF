@@ -3,12 +3,12 @@ body{
 	transition: all 1s;
 }
 @font-face {
-    font-family: 'Nunito-Bold';
-    src:url(../fonts/Nunito-Bold.ttf) format('truetype');
+  font-family: 'Nunito';
+  src: url('fonts/Nunito-Bold.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'OpenSans-Regular';
-    src:url(../fonts/OpenSans-Regular.ttf) format('truetype');
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
 }
 .mainHeader{
 	  position: fixed; 
@@ -271,27 +271,37 @@ background: rgba(255,255,255,0.3);
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff) format('woff');
+  src: local('Lato Hairline'), local('Lato-Hairline'), 
+  url('http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
+  src: local('Lato Light'), local('Lato-Light'), 
+  url('http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff') format('woff');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
-}
+  font-family: 'Nunito';
+  src: local('Nunito Bold'), local('Nunito-Bold'), 
+  url('fonts/Nunito-Bold.woff2') format('woff2'),
+  url('fonts/Nunito-Bold.woff') format('woff'),
+  url('fonts/Nunito-Bold.ttf') format('truetype');
+      }
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+  font-family: 'Nunito';
+  src: local('Nunito Bold'), local('Nunito-Bold'), 
+  url('fonts/Nunito-Bold.woff2') format('woff2'),
+  url('fonts/Nunito-Bold.woff') format('woff'),
+  url('fonts/Nunito-Bold.ttf') format('truetype');
 }
 
 #myBtn {
