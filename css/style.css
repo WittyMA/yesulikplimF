@@ -709,6 +709,7 @@ color: red;
 }
 
 #zoom-out {
+  text-align: center;
   transition: transform 0.5s ease;
 }
 #zoom-out:hover {
