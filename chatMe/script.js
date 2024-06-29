@@ -90,7 +90,7 @@ function waitAndResponce(inputText) {
             sendTextMessage(resumeString);
             break;
         case "skills":
-            sendTextMessage("<span class='sk'>I am currently pursuing BSc. degree in Information Technology.<br><br>I can comfortably write code in following languages :<br><span class='bold'>Java<br>C++<br>C<br>Python<br>Kotlin<br>Dart<br>SQL<br>JavaScript(ReatJS & NodeJS)<br>CSS<br>HTML</span><br><br>I've experiance with following frameworks :<span class='bold'><br>Android<br>JavaFX<br>ReactJs & NodeJs<br>Desktop and Web Application</span><br><br>I use <span class='bold'>Ubuntu & Parrot Linux OS</span> as daily driver on my Dell PC<br>OS:Arch Linux<br>DE:Gnome(More often) Kde(often)<br>Favourite IDE:VSCode, Netbeans & IntelliJ</span>");
+            sendTextMessage("<span class='sk'>I am currently pursuing BSc. degree in Information Technology.<br><br>I can comfortably write code in following languages :<br><span class='bold'>Java<br>C++<br>C<br>Python<br>Kotlin<br>R<br>SQL<br>JavaScript(ReatJS & NodeJS)<br>CSS<br>HTML</span><br><br>I've experiance with following frameworks :<span class='bold'><br>Android<br>JavaFX<br>ReactJs & NodeJs<br>Jupyter Notebook<br>R-Studio<br>Orange<br>Database for Desktop and Web Application<br>and more..</span><br><br>I use <span class='bold'>Ubuntu & Parrot Linux OS</span> as daily driver on my Dell PC<br>OS:Arch Linux<br>DE:Gnome(More often) Kde(often)<br>Favourite IDE:VSCode, Netbeans & IntelliJ</span>");
             break;
 
         case "education":
