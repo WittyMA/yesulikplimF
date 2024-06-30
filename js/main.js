@@ -1,6 +1,5 @@
 // Wait for the DOM to fully load before executing the script
 
-import { v4 as uuidv4 } from 'uuid';
 document.addEventListener('DOMContentLoaded', function() {
     // Cache the elements to avoid querying the DOM multiple times
     const navbar = document.getElementById("navbar");
@@ -58,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // ------------------------------------------------------------------------------------------------------------------------------------------------------
 // EmailJS integration
 
-
-emailjs.init('0tjP686dOUAc4zf-I')// Replace with your EmailJS user ID == Public key from EmailJS dashboard
- 
+(function () {
+    emailjs.init('0tjP686dOUAc4zf-I')// Replace with your EmailJS user ID == Public key from EmailJS dashboard
+  });
 // ------------------------------------------------------------------------------------------------------------------------------------------------------
 // Email validation and form submission
 
