@@ -287,10 +287,9 @@ background: rgba(255,255,255,0.3);
   font-style: normal;
   font-weight: 400;
   font-family: 'Nunito';
-  src: local('Nunito Bold'), local('Nunito-Bold'), 
-  url('fonts/Nunito-Bold.woff2') format('woff2'),
-  url('fonts/Nunito-Bold.woff') format('woff'),
-  url('fonts/Nunito-Bold.ttf') format('truetype');
+  src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap') format('truetype');
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap') format('truetype');
+  src: url('https://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff') format('woff');
       }
 
 @font-face {
@@ -298,10 +297,9 @@ background: rgba(255,255,255,0.3);
   font-style: normal;
   font-weight: 700;
   font-family: 'Nunito';
-  src: local('Nunito Bold'), local('Nunito-Bold'), 
-  url('fonts/Nunito-Bold.woff2') format('woff2'),
-  url('fonts/Nunito-Bold.woff') format('woff'),
-  url('fonts/Nunito-Bold.ttf') format('truetype');
+  src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap') format('truetype');
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap') format('truetype');
+  src: url('https://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff') format('woff');
 }
 
 #myBtn {
