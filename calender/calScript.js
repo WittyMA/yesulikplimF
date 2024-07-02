@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (logoutButton) {
             logoutButton.addEventListener('click', async function() {
                 try {
-                    const response = await fetch('/logout', {
+                    const response = await fetch('https://yesulikplimb.wittymayits.workers.dev/logout', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
