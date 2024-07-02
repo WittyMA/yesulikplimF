@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const response = await fetch('https://yesulikplimb-production.wwanyizah.workers.dev/login', {
+      const response = await fetch('https://yesulikplimb.wittymayits.workers.dev/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
