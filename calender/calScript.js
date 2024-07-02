@@ -150,37 +150,38 @@ document.addEventListener('DOMContentLoaded', function() {
         saveEvents(calendar.getEvents());
     }
 
-    // Handle logout
-    document.addEventListener('DOMContentLoaded', function() {
-        const logoutButton = document.getElementById('logoutButton');
-    
-        if (logoutButton) {
-            logoutButton.addEventListener('click', async function() {
-                try {
-                    const response = await fetch('https://yesulikplimb.wittymayits.workers.dev/logout', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    });
-    
-                    const data = await response.json();
-    
-                    if (data.message === 'Logged out successfully') {
-                        alert('You have been logged out.');
-                        localStorage.removeItem('userRole');
-                        window.location.href = '/';
-                    } else {
-                        alert('Logout failed. Please try again later.');
-                    }
-                } catch (error) {
-                    console.error('Logout error:', error);
-                    alert('Logout failed. Please try again later.');
-                }
-            });
-        } else {
-            console.error('Logout button not found');
-        }
-    });
-    
 });
+
+// Handle logout functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const logoutButton = document.getElementById('logoutButton'); // Get the logout button element
+  
+    if (logoutButton) { // Check if the logout button exists
+      logoutButton.addEventListener('click', async function() {
+        try {
+          const response = await fetch('https://yesulikplimb.wittymayits.workers.dev/logout', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json' // Set content type to JSON
+            }
+          });
+  
+          const data = await response.json(); // Parse response as JSON
+  
+          if (data.message === 'Logged out successfully') { // Check if logout was successful
+            alert('You have been logged out.'); // Alert user of successful logout
+            localStorage.removeItem('userRole'); // Remove user role from local storage
+            window.location.href = '/'; // Redirect user to homepage
+          } else {
+            alert('Logout failed. Please try again later.'); // Alert user of logout failure
+          }
+        } catch (error) {
+          console.error('Logout error:', error); // Log error to console
+          alert('Logout failed. Please try again later.'); // Alert user of logout failure
+        }
+      });
+    } else {
+      console.error('Logout button not found'); // Log error if logout button is not found
+    }
+  });
+  

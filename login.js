@@ -5,23 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Check current display status of loginContainer
     if (loginContainer.style.display === 'none' || loginContainer.style.display === '') {
-      // If loginContainer is hidden or not set, show it
-      loginContainer.style.display = 'block';
+      loginContainer.style.display = 'block'; // If hidden or not set, show it
     } else {
-      // If loginContainer is visible, hide it
-      loginContainer.style.display = 'none';
+      loginContainer.style.display = 'none'; // If visible, hide it
     }
   });
 
   // Handle form submission for loginForm
   document.getElementById('loginForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission
 
-    var username = document.getElementById('username').value.trim();
-    var password = document.getElementById('password').value.trim();
+    var username = document.getElementById('username').value.trim(); // Get and trim username value
+    var password = document.getElementById('password').value.trim(); // Get and trim password value
 
     if (username === '' || password === '') {
-      alert('Username and password are required.');
+      alert('Username and password are required.'); // Alert if username or password is empty
       return;
     }
 
@@ -29,26 +27,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const response = await fetch('https://yesulikplimb.wittymayits.workers.dev/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json', // Set content type to JSON
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password }), // Send username and password in request body
+        credentials: 'include', // Include credentials in the request
       });
 
+      const data = await response.json(); // Parse response as JSON
+
       if (!response.ok) {
-        throw new Error('Network response was not ok.');
+        alert(data.error || 'Login failed. Please try again later.'); // Alert error message if response is not ok
+        return;
       }
 
-      const data = await response.json();
-
-      if (data.success) { // Assuming the response has a 'success' field to indicate login status
-        alert(data.message); // Display success message or handle as needed
-        window.location.href = 'https://www.yesulikplimits.com/admin.html'; // Redirect to admin page on success
-      } else {
-        alert(data.error); // Display error message from server
-      }
+      alert(data.message); // Alert success message
+      window.location.href = 'https://www.yesulikplimits.com/admin.html'; // Redirect to admin page on success
     } catch (error) {
-      console.error('Login error:', error);
-      alert('Login failed. Please try again later.');
+      console.error('Login error:', error); // Log error to console
+      alert('Login failed. Please try again later.'); // Alert generic error message
     }
   });
 });
