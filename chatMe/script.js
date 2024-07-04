@@ -94,7 +94,7 @@ function waitAndResponce(inputText) {
             break;
 
         case "education":
-            sendTextMessage("I am currently pusuing BSc. degree in Information Technology from University of Cape Coast<br>Passing Year : 2023<br><br>I have completed my Diploma in driving<br>Passing Year:2019<br><br>I have completed my senior high school from local school known as KASEC<br>Passing Year:2018");
+            sendTextMessage("I am currently pusuing BSc. degree in Information Technology from University of Cape Coast<br>Passing Year : 2024<br><br>I have completed my Diploma in driving<br>Passing Year:2019<br><br>I have completed my senior high school from local school known as KASEC<br>Passing Year:2018");
             break;
 
         case "address":
