@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const response = await fetch('wittyma.yesulikplimits.com/login', {
+      const response = await fetch('https://wittyma.yesulikplimits.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Set content type to JSON
@@ -32,19 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({ username, password }), // Send username and password in request body
         credentials: 'include', // Include credentials in the request
       });
-
-      const data = await response.json(); // Parse response as JSON
-
+    
+      const text = await response.text(); // Get raw response text
+    
+      // Log the status and raw response text for debugging
+      console.log('Response status:', response.status);
+      console.log('Response text:', text);
+    
       if (!response.ok) {
-        alert(data.error || 'Login failed. Please try again later.'); // Alert error message if response is not ok
+        alert(`Login failed: ${text}`); // Alert raw response text if response is not ok
         return;
       }
-
+    
+      const data = JSON.parse(text); // Parse response text as JSON
+    
       alert(data.message); // Alert success message
       window.location.href = 'https://www.yesulikplimits.com/admin.html'; // Redirect to admin page on success
     } catch (error) {
       console.error('Login error:', error); // Log error to console
       alert('Login failed. Please try again later.'); // Alert generic error message
     }
+    
   });
 });
