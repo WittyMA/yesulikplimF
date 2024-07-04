@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (logoutButton) { // Check if the logout button exists
       logoutButton.addEventListener('click', async function() {
         try {
-          const response = await fetch('/logout', {
+          const response = await fetch('https://wittyma.yesulikplimits.com/logout', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json' // Set content type to JSON
