@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const response = await fetch('yits.yesulikplimits.com/login', {
+      const response = await fetch('wittyma.yesulikplimits.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Set content type to JSON
