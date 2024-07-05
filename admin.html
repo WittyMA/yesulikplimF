@@ -39,7 +39,6 @@
     <!-- MAIN JQUERY -->
     <script src="js/jquery.js" defer></script>
     <script src="calender/index.global.js"></script>
-    <script src="calender/calScript.js"></script> <!--- This calendar javascript link-->
     <link rel="stylesheet" href="calender/calStyle.css">
 </head>
 <body>
@@ -79,12 +78,13 @@
     <div id="time" class="dropdown">
         <!-- Time will be populated by JavaScript -->
     </div>
-    
+    <div><button id="logoutButton" class="btn btn-default">Logout</button></div>
+    <script src="calender/calScript.js"></script> <!--- This calendar javascript link-->
+
     <section class="container-fluid event fadeIn" id="event">
-        <button id="logoutButton" class="btn btn-default">Logout</button>
         <h3 class="neon-text">Add Event</h3>
         <div class="form-container">
-            <form  action="https://www.yesulikplimits.com/admin.html" method="post" id="eventForm">
+            <form  action="" method="post" id="eventForm">
                 <div class="form-group">
                     <label for="title">Event Title:</label>
                     <input type="text" class="form-control" id="title" name="title" required>
