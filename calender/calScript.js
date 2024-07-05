@@ -161,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
           const response = await fetch('https://wittyma.yesulikplimits.com/logout', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json' // Set content type to JSON
             }

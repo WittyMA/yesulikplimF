@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const response = await fetch('https://wittyma.yesulikplimits.com/login', {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
