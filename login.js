@@ -1,3 +1,24 @@
+// Define loginUser function for fetching login endpoint
+async function loginUser(username, password) {
+  const url = 'https://wittyma.yesulikplimits.com/login';
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username, password }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Failed to login: ${errorText}`);
+  }
+
+  const data = await response.json();
+  return data;
+}
+
+// Event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   // Toggle login container visibility when adminButton is clicked
   document.getElementById('adminButton').addEventListener('click', function() {
@@ -24,29 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const response = await fetch('https://wittyma.yesulikplimits.com/login', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-    
-      if (!response.ok) {
-        const text = await response.text();
-        console.log('Response status:', response.status);
-        console.log('Response text:', text);
-        alert(`Login failed: ${text}`);
-        return;
-      }
-    
-      const data = await response.json();
-      alert(data.message);
-      window.location.href = 'https://www.yesulikplimits.com/admin.html';
+      const data = await loginUser(username, password);
+      alert(data.message); // Display success message
+      window.location.href = 'https://www.yesulikplimits.com/admin.html'; // Redirect to admin page
     } catch (error) {
       console.error('Login error:', error); // Log error to console
-      alert('Network error: Unable to reach the server. Please check your connection and try again later.');
+      alert('Login failed: Please check your credentials and try again.'); // Alert user about login failure
     }
   });
 });
