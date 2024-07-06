@@ -1,21 +1,25 @@
 // Define loginUser function for fetching login endpoint
 async function loginUser(username, password) {
-  const url = 'https://wittyma.yesulikpmits.com';
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ username, password }),
-  });
+  const url = 'https://wittyma.yesulikpmits.com/login';
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    });
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Failed to login: ${errorText}`);
+    if (!response.ok) {
+      throw new Error(`Failed to login: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Login error:', error);
+    throw error;
   }
-
-  const data = await response.json();
-  return data;
 }
 
 // Event listener for DOMContentLoaded
@@ -45,13 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      
-      if (response.ok) {
-        const data = await response.json();
+      const data = await loginUser(username, password);
+
+      // Check the response data for success or failure
+      if (data.message === 'Logged in successfully') {
         alert(data.message);
-        window.location.href = 'https://www.yesulikplimits.com/admin.html';
-      }else {
-      alert(data.error); // Display error message from server
+        window.location.href = 'https://www.yesulikplimits.com/admin.html'; // Redirect to admin page on successful login
+      } else {
+        alert(data.error); // Display error message from server
       }
     } catch (error) {
       console.error('Login error:', error); // Log error to console
@@ -59,6 +64,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-
-
