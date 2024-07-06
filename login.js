@@ -1,29 +1,3 @@
-// Define loginUser function for fetching login endpoint
-async function loginUser(username, password) {
-  const url = '/login';
-  try {
-    const response = await fetch(url, {
-      method: ['POST'],
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Failed to login: ${response.statusText}`);
-    }
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Login error:', error);
-    throw error;
-  }
-}
-
-// Event listener for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   // Toggle login container visibility when adminButton is clicked
   document.getElementById('adminButton').addEventListener('click', function() {
@@ -50,18 +24,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const data = await loginUser(username, password);
-
-      // Check the response data for success or failure
-      if (data.message === 'Logged in successfully') {
-        alert(data.message);
-        window.location.href = 'https://www.yesulikplimits.com/admin.html'; // Redirect to admin page on successful login
-      } else {
-        alert(data.error); // Display error message from server
+      const response = await fetch('/login', {
+        method: ['POST'],
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+    
+      if (!response.ok) {
+        const text = await response.text();
+        console.log('Response status:', response.status);
+        console.log('Response text:', text);
+        alert(`Login failed: ${text}`);
+        return;
       }
+      if (response.ok) {
+      const data = await response.json();
+      alert(data.message);
+      window.location.href = 'https://www.yesulikplimits.com/admin.html';
+  }else {
+    alert(data.error); // Display error message from server
+}
     } catch (error) {
       console.error('Login error:', error); // Log error to console
-      alert('Login failed: Please check your credentials and try again.'); // Alert user about login failure
+      alert('Network error: Unable to reach the server. Please check your connection and try again later.');
     }
   });
 });
+
+
+
+
+if (response.ok) {
+  const data = await response.json();
+  alert(data.message);
+  window.location.href = 'https://www.yesulikplimits.com/admin.html';
+}else {
+alert(data.error); // Display error message from server
+}
