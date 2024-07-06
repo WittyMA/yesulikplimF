@@ -3,7 +3,8 @@ async function loginUser(username, password) {
   const url = '/login';
   try {
     const response = await fetch(url, {
-      method: 'POST',
+      method: ['POST'],
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
       },
