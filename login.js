@@ -1,6 +1,6 @@
 // Define loginUser function for fetching login endpoint
 async function loginUser(username, password) {
-  const url = 'https://wittyma.yesulikplimits.com/login';
+  const url = 'https://wittyma.yesulikplimits.com/';
   try {
     const response = await fetch(url, {
       method: 'POST',
