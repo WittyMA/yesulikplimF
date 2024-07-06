@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const response = await fetch('http://wittyma.yesulikplimits.com', {
+      const response = await fetch('https://wittyma.yesulikplimits.com', {
         method: ['POST'],
         mode: 'no-cors',
         headers: {
