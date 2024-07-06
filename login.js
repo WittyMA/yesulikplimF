@@ -40,27 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Login failed: ${text}`);
         return;
       }
-      if (response.ok) {
+    
       const data = await response.json();
       alert(data.message);
       window.location.href = 'https://www.yesulikplimits.com/admin.html';
-  }else {
-    alert(data.error); // Display error message from server
-}
     } catch (error) {
       console.error('Login error:', error); // Log error to console
       alert('Network error: Unable to reach the server. Please check your connection and try again later.');
     }
   });
 });
-
-
-
-
-if (response.ok) {
-  const data = await response.json();
-  alert(data.message);
-  window.location.href = 'https://www.yesulikplimits.com/admin.html';
-}else {
-alert(data.error); // Display error message from server
-}
